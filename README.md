@@ -70,7 +70,9 @@ vision-pursuit-robot/
 ├── docs/
 │   ├── learning-journey.md   # June to now, step by step
 │   ├── hardware-build.md     # assembling and testing the robot
-│   └── challenges.md         # problems we hit and how we fixed them
+│   ├── challenges.md         # problems we hit and how we fixed them
+│   ├── architecture.md       # how the software fits together
+│   └── resources.md          # tutorials and docs that helped us
 ├── hardware/
 │   └── parts-list.md
 └── src/
@@ -80,11 +82,13 @@ vision-pursuit-robot/
     └── vision_pursuit/       # final robot code (coming soon)
 ```
 
+
 ## Documentation
 
 - [Learning journey](docs/learning-journey.md)
 - [Hardware build](docs/hardware-build.md)
 - [Challenges and fixes](docs/challenges.md)
+- [Resources](docs/resources.md)
 
 ## Credits
 
