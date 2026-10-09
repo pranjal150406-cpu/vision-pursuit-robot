@@ -148,10 +148,10 @@ The problems I ran into while building this project, what I tried, and what I le
 
 **What I tried:** we kept researching and testing each possibility one by one: the code, the network, and the Pi's load.
 
-**Fix:** the Pi was overloaded. We made two changes:
-- Reduced the weight of the lidar bring-up file so it used less of the Pi's resources.
-- Lowered the resolution of the `cam2image` command so it sent smaller images.
+**Fix:** the Pi was overloaded, so we reduced its work in two ways:
+- Made the lidar bring-up less heavier on the navigation stack so it used fewer of the Pi's resources.
+- Cut down what `cam2image` sends: a small 320x240 image, 10 frames per second, `best_effort` delivery and a queue depth of 1. That way the Pi sends only the newest frame and never waits to resend old ones.
 
 After both changes the lag dropped and the robot responded on time.
 
-**Lesson:** when a robot feels slow, the bottleneck can be the hardware's limits rather than the code. Reduce the load (resolution, heavy launch files) before blaming the logic.
+**Lesson:** when a robot feels slow, the bottleneck can be the hardware's limits rather than the code. Reduce the load (resolution, frame rate, heavy launch files) before blaming the logic.
