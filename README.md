@@ -9,7 +9,7 @@ A ROS 2 robot that finds a colored target using its camera, chases it, and avoid
 The robot runs a finite state machine (FSM) that combines two behaviors:
 
 - **Color detection:** the camera finds a colored object and steers the robot toward its center.
-- **Obstacle avoidance:** the lidar detects things in the way, and avoidance always takes priority over searching and chasing so the robot never drives into an obstacle.
+- **Obstacle avoidance:** the lidar detects things in the way, so the robot never drives blindly into an obstacle while it is searching.
 
 States:
 - **Search:** look for the target.
