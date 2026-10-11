@@ -20,7 +20,7 @@ class obstacle_detector(Node):
         self.lidar=msg
 
     def avoider(self):
-        if self.lidar is None: #wait for data to arrive otherwise nulllists,null everything
+        if self.lidar is None: #wait for data to arrive otherwise null lists,null everything
             return
         move=Twist()
         self.len=len(self.lidar.ranges)
